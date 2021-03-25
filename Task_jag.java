@@ -14,11 +14,7 @@ public class Task_jag {
         int c = sc.nextInt();
         System.out.println("Enter the number:");
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-
-
+        System.out.println(a+"\n"+b+"\n"+c);
 
 
 
