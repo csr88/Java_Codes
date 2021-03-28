@@ -19,6 +19,7 @@ public class ATM_Machine {
 
         int balance = 100000;
         System.out.println("\nYour remaining balance is: " + (balance-withdraw) + " \nHmmmm you're a rich kid huh!!!!   ;)  ");
+        //Adding a smile emoji
         System.out.println("\n \uD83D\uDE00");
 
     }
