@@ -1,10 +1,14 @@
 package com.company;
+import java.util.Scanner;
 
 public class Armstrong {
 
     public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int number = sc.nextInt();
 
-        int number = 371, originalNumber, remainder, result = 0;
+        int originalNumber, remainder, result = 0;
 
         originalNumber = number;
 

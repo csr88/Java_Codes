@@ -29,10 +29,12 @@ public class No_of_Digits {
 
         int counting = 0, digit = 123456;
 
+        // Here ;  so that we can go straight to the conditions and also we can put as much conidions as we want in for loop
+
         for (; digit > 0; digit /= 10, ++counting){
 
         }
-        //but why curly braces?
+        //curly braces to print the result only after the loop is complete and the number of digits has been found.
         System.out.println("Number of digits: " + counting);
 
     }
