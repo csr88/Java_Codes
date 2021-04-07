@@ -32,11 +32,13 @@ public class MultiDimensionalArray {
                 System.out.println();
             }
         }
+
+        //printing first matrix
         System.out.println("The first matrix is: ");
 
         for (int i=0;i<2;i++){
             for(int j=0;j<2;j++){
-                System.out.println(arr1[i][j]+"\t");
+                System.out.print(arr1[i][j]+"\t");
             }
             System.out.println();
         }
@@ -56,15 +58,12 @@ public class MultiDimensionalArray {
 
         for (int i=0;i<2;i++){
             for(int j=0;j<2;j++){
-                System.out.println(arr2[i][j]+"\t");
+                System.out.print(arr2[i][j]+"\t");
             }
             System.out.println();
         }
 
-        //making it look cool
-        System.out.println("\n\tPerforming addition...");
-
-
+        //Resultant Matrix
         for (int i=0;i<2;i++){
             for(int j=0;j<2;j++){
                 res[i][j] = arr1[i][j] + arr2[i][j];
@@ -73,16 +72,17 @@ public class MultiDimensionalArray {
         }
 
         //printing the resultant matrix in matrix form
+        System.out.println("\nThe resultant matrix is: ");
         for (int i=0;i<2;i++){
             for(int j=0;j<2;j++){
-                        System.out.println(res[i][j]+"\t");
+                        System.out.print(res[i][j]+"\t");
             }
             System.out.println();
         }
 
 
 
-        System.out.println("Operation Complete!");
+        System.out.println("\nOperation Complete!");
         sc.close();
 
     }
