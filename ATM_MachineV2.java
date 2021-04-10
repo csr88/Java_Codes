@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ATM_MachineV2 {
     public static void main(String[] args){
-        int balence = 560000;
+        int balance = 560000;
         System.out.println("Dear Customer, Welcome to Shishir Bank Pvt.Ltd");
         Scanner sc =  new Scanner(System.in);
         System.out.println("Enter your pin: ");
@@ -11,7 +11,7 @@ public class ATM_MachineV2 {
         if (pin==1234) {
             while (true) {
                 System.out.println("\nSelect a transaction: ");
-                System.out.println("\n\t 1. Balence Inquiry ");
+                System.out.println("\n\t 1. balance Inquiry ");
                 System.out.println("\t 2. Withdrawal");
                 System.out.println("\t 3. Deposit");
                 System.out.println("\t 4. Fast Cash");
@@ -21,21 +21,21 @@ public class ATM_MachineV2 {
                 int menu = sc.nextInt();
 
                 if (menu == 1) {
-                    System.out.println("\n\tYour total balence is: " + balence);
+                    System.out.println("\n\tYour total balance is: " + balance);
                 }
-                if (menu == 2) {
+                else if (menu == 2) {
                     System.out.println("\n\tEnter the withdrawal amount: ");
                     int withdrawal = sc.nextInt();
                     System.out.println("Rs." + withdrawal + " has been withdrawan.");
-                    System.out.println("You remaining balence is Rs." + (balence - withdrawal));
+                    System.out.println("You remaining balance is Rs." + (balance - withdrawal));
                 }
-                if (menu == 3) {
+                else if (menu == 3) {
                     System.out.println("\n\tEnter the amount you want to deposit: ");
                     int deposit = sc.nextInt();
                     System.out.println("Rs." + deposit + " has been deposited in your bank account");
-                    System.out.println("Your remaining balence is Rs." + (balence + deposit));
+                    System.out.println("Your remaining balance is Rs." + (balance + deposit));
                 }
-                if (menu == 4) {
+                else if (menu == 4) {
                     System.out.println("\n\nSelect the amount you want to withdraw. ");
                     System.out.println("1. Rs.1000");
                     System.out.println("2. Rs.5000");
@@ -46,26 +46,26 @@ public class ATM_MachineV2 {
 
                     if (fc == 1) {
                         System.out.println("\n\t Rs.1000 has been withdrawan from your account");
-                        System.out.println("\tYour remaining balence is Rs." + (balence - 1000));
+                        System.out.println("\tYour remaining balance is Rs." + (balance - 1000));
                     }
-                    if (fc == 2) {
+                    else if (fc == 2) {
                         System.out.println("\n\t Rs.5000 has been withdrawan from your account");
-                        System.out.println("\tYour remaining balence is Rs." + (balence - 5000));
+                        System.out.println("\tYour remaining balance is Rs." + (balance - 5000));
                     }
-                    if (fc == 3) {
+                    else if (fc == 3) {
                         System.out.println("\n\t Rs.10000 has been withdrawan from your account");
-                        System.out.println("\tYour remaining balence is Rs." + (balence - 10000));
+                        System.out.println("\tYour remaining balance is Rs." + (balance - 10000));
                     }
-                    if (fc == 4) {
+                    else if (fc == 4) {
                         System.out.println("\n\t Rs.25000 has been withdrawan from your account");
-                        System.out.println("\tYour remaining balence is Rs." + (balence - 25000));
+                        System.out.println("\tYour remaining balance is Rs." + (balance - 25000));
                     }
                     }
                     else {
                     System.out.println("Invalid Fast Cash Option!"); //Invalid Fast Cash Option
                     }
 
-                if (menu == 5) {
+                  if (menu == 5) {
                     System.out.println("Enter the old pin: ");
                     if (pin == 1234) {
                         System.out.println("Enter the new pin: ");
@@ -73,8 +73,9 @@ public class ATM_MachineV2 {
                         pin = newpin;
                         System.out.println("PIN has been changed succesfully.");
                     }
+
                 }
-                if(menu==6){
+                else if(menu==6){
                     System.out.println("Exitting...");
                     break;
                 }
