@@ -1,5 +1,3 @@
-package com.company;
-
 public class PrintStarPattern_JavaLab {
     public static void main(String[] args){
         int i,j;

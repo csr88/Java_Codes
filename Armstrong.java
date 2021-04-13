@@ -1,4 +1,3 @@
-package com.company;
 import java.util.Scanner;
 
 public class Armstrong {
@@ -8,20 +7,22 @@ public class Armstrong {
         System.out.println("Enter the number: ");
         int number = sc.nextInt();
 
-        int originalNumber, remainder, result = 0;
+        int originalnum, remainder, result = 0;
 
-        originalNumber = number;
+        originalnum = number;
 
-        while (originalNumber != 0)
+        while (originalnum != 0)
         {
-            remainder = originalNumber % 10;
+            remainder = originalnum % 10;
             result += Math.pow(remainder, 3);
-            originalNumber /= 10;
+            originalnum /= 10;
         }
 
-        if(result == number)
+        if(result == number){
             System.out.println(number + " is an Armstrong number.");
-        else
+        }
+        else {
             System.out.println(number + " is not an Armstrong number.");
+        }
     }
 }

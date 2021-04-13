@@ -1,4 +1,3 @@
-package com.company;
 import java.util.Scanner;
 
 public class Array {
@@ -33,7 +32,7 @@ public class Array {
 
 
 
-        float[] x = new float[7]; //-> creates variables from weight0-weight4
+        float[] x = new float[7]; //-> creates variables from x0-x6
 
         Scanner sc = new Scanner(System.in);
         System.out.println("\nEnter the input value: ");

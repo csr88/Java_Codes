@@ -1,12 +1,11 @@
 import java.util.Scanner;
-public class ATM_Transaction {
+public class ATMV2 {
     public static void main(String args[]) {
         int balance = 350000, withdraw, deposit;
         Scanner sc = new Scanner(System.in);
-        int pin=1234, newpin;
         System.out.println("Enter the pin: ");
-        int askpin = sc.nextInt();
-        if (askpin == pin) {
+        int pin  = sc.nextInt();
+        if (pin == 1234) {
 
             char ex;
             do {
@@ -14,8 +13,7 @@ public class ATM_Transaction {
                 System.out.println("Choose 1 for Withdraw");
                 System.out.println("Choose 2 for Deposit");
                 System.out.println("Choose 3 for Check Balance");
-                System.out.println("Choose 4 for PIN Change");
-                System.out.println("Choose 5 for EXIT");
+                System.out.println("Choose 4 for EXIT");
                 System.out.print("\nChoose the operation you want to perform:");
                 int n = sc.nextInt();
                 switch (n) {
@@ -28,14 +26,13 @@ public class ATM_Transaction {
                         } else {
                             System.out.println("Insufficient Balance");
                         }
-                        System.out.println("");
                         break;
 
                     case 2:
                         System.out.print("Enter money to be deposited:");
                         deposit = sc.nextInt();
                         balance = balance + deposit;
-                        System.out.println("Rs " + deposit + " been successfully depsited");
+                        System.out.println("Rs " + deposit + " has been successfully deposited");
                         System.out.println("You current balance is " + balance);
                         break;
 
@@ -45,22 +42,15 @@ public class ATM_Transaction {
                         break;
 
                     case 4:
-                        System.out.println("Enter your old PIN: ");
-                        int oldpin = sc.nextInt();
-                        if (oldpin==pin){
-                            System.out.println("Enter the new PIN");
-                            newpin = sc.nextInt();
-                            pin = newpin;
-                            System.out.println("PIN change successful!");
-                        }
-
-                    case 5:
                         System.exit(0);
                 }
 
-            System.out.println("\nDo you want to continue?(y/n");
-            ex = sc.next().charAt(0);
+                System.out.println("\nDo you want to continue?(y/n)");
+                ex = sc.next().charAt(0);
             } while (ex == 'y');
+        }
+        else{
+            System.out.println("Invalid Pin.");
         }
     }
 }
