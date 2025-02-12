@@ -1,3 +1,1 @@
-# Java_Lab
-
-This Repository contains all the codes of the Java Lab.
+These are answers to some of the basic java practice questions.
