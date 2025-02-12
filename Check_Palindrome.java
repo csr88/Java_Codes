@@ -3,7 +3,7 @@ package com.company;
 import java.util.Scanner;
 
 public class Check_Palindrome {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         //Declaring the number
@@ -26,6 +26,5 @@ public class Check_Palindrome {
         else {
             System.out.println(number + " is not palindrome.");
         }
-
-
-}}
+    }
+}

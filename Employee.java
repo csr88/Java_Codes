@@ -1,91 +1,66 @@
-import java.io.*;
+package com.company;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Employee {
     String name;
-    int age;
     double salary;
 
 
-    Employee(String nam,int ag, int sal){
-        name = nam;
-        age = ag;
-        salary = sal;
+    Employee(){
+        this.name=null;
+        this.salary=0;
     }
 
-    String getName(){
-        String n = name;
-        return n;
+    Employee(String name, double salary){
+        this.name=name;
+        this.salary=salary;
     }
 
-    int getAge(){
-        int a = age;
-        return a;
-    }
-
-    double getSalary(){
-        double s = salary;
-        return s;
-    }
-
-    Employee compSalary(Employee e2value){
-
-        if (this.getSalary()> e2value.getSalary()){
-            return this;
+    static void compare_employee(Employee a, Employee b){
+        if (a.salary>b.salary) {
+            System.out.println("\n" + a.name + " has higher fucking salary.");
+        }
+        else {
+            System.out.println("\n" + b.name + " has higher fuck off  salary");
         }
 
-        else{
-            return e2value;
+    }
+    static void display(ArrayList<Employee>emp){
+        System.out.println();
+        System.out.print("Name - ");
+        System.out.print("Salary");
+        System.out.println();
+
+        Employee obj;
+        for (int i=0;i< emp.size();i++){
+            obj = emp.get(i);
+            System.out.print(obj.name + " - ");
+            System.out.println(obj.salary);
         }
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        PrintWriter outF = new PrintWriter("/home/shishir/IdeaProjects/Shishir/Javalab 10 qsns/src/emp.txt");
+        String n;
+        double s;
+        ArrayList<Employee> arr = new ArrayList<>();
 
 
-        Employee e1 = new Employee("Ram",25,50000);
-        Employee e2 = new Employee("Shyam",45,70000);
-        Employee compare = e1.compSalary(e2);
-
-        System.out.println(compare.getName() + " has the highest salary");
-
-
-        outF.printf("Name");
-        outF.printf("\tAge");
-        outF.printf("\t\tSalary");
-
-        if (e1.getSalary() > e2.getSalary()){
-            outF.printf("\n"+e1.getName());
-            outF.printf("\t\t"+ e1.getAge());
-            outF.printf("\t\t"+ e1.getSalary());
+        Employee obj;
+        for (int i=0;i<2;i++){
+            System.out.println("Enter name and blooding salary of employee " + i+1);
+            n = sc.next();
+            s = sc.nextDouble();
+            obj = new Employee(n,s);
+            arr.add(obj);
         }
 
-        else{
+        compare_employee(arr.get(0), arr.get(1));
+        display(arr);
 
-            outF.printf("\n"+e2.getName());
-            outF.printf("\t"+ e2.getAge());
-            outF.printf("\t\t"+ e2.getSalary());
+
         }
 
-//        outF.printf("\n"+e1.getName());
-//        outF.printf("\t\t"+ e1.getAge());
-//        outF.printf("\t\t"+ e1.getSalary());
-//
-//        outF.printf("\n"+e2.getName());
-//        outF.printf("\t"+ e2.getAge());
-//        outF.printf("\t\t"+ e2.getSalary());
-
-
-
-
-
-
-
-
-        outF.close();
-        sc.close();
-
-
-    }
 }

@@ -1,0 +1,4 @@
+Name		Mark			Percentage
+ram		50.0,60.0,60.0		60.0%
+Name		Mark			Percentage
+hari		40.0,50.0,50.0		50.0%
