@@ -1,28 +1,23 @@
-import java.util.Scanner;
+package com.company;
 
 public class Armstrong {
 
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        System.out.println("Enter the number: ");
-        int number = sc.nextInt();
 
-        int originalnum, remainder, result = 0;
+        int number = 371, originalNumber, remainder, result = 0;
 
-        originalnum = number;
+        originalNumber = number;
 
-        while (originalnum != 0)
+        while (originalNumber != 0)
         {
-            remainder = originalnum % 10;
+            remainder = originalNumber % 10;
             result += Math.pow(remainder, 3);
-            originalnum /= 10;
+            originalNumber /= 10;
         }
 
-        if(result == number){
+        if(result == number)
             System.out.println(number + " is an Armstrong number.");
-        }
-        else {
+        else
             System.out.println(number + " is not an Armstrong number.");
-        }
     }
 }

@@ -1,3 +1,4 @@
+package com.company;
 import java.util.Scanner;
 
 public class Income_Tax_JavaLab {
@@ -10,11 +11,11 @@ public class Income_Tax_JavaLab {
             System.out.println("\nTax Amount is Rs 0");
         }
 
-        else if (income>=100001 && income <=150000){
+        if (income>=100001 && income <=150000){
             System.out.println("\nTax Amount is Rs " + ((income-100000)*0.1) );
         }
 
-        else if (income>=150001 && income <=250000){
+        if (income>=150001 && income <=250000){
             System.out.println("\nTax Amount is Rs " + ((income-150000)*0.2)+5000 );
         }
 

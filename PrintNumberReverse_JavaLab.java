@@ -1,3 +1,4 @@
+package com.company;
 import java.util.Scanner;
 
 public class PrintNumberReverse_JavaLab {
@@ -6,18 +7,20 @@ public class PrintNumberReverse_JavaLab {
 
         //Declaring the number
         System.out.println("Enter the integer: ");
-        int num = sc.nextInt();
+        int number = sc.nextInt();
 
-            int reversed = 0;
 
-            while(num != 0) {
+        // Printing the last digit of the number
+        while (number > 0) {
 
-                int digit = num % 10;
-                reversed = reversed * 10 + digit;
-                num /= 10;
-            }
+            // Finding the remainder (Last Digit)
+            int remainder = number % 10;
 
-            System.out.println("Reversed Number: " + reversed);
+            // Printing the remainder/current last digit
+            System.out.print(remainder);
+
+            // Removing the last digit/current last digit
+            number = number / 10;
         }
     }
-
+}

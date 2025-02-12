@@ -1,2 +1,3 @@
-# Java_Codes
-This repository contains all the codes I wrote during the Programming Fundamentals Course. 
+# Java_Lab
+
+This Repository contains all the codes of the Java Lab.

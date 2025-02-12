@@ -1,3 +1,4 @@
+package com.company;
 import java.util.Scanner;
 
 public class TemperatureConversion_JavaLab {
@@ -13,11 +14,11 @@ public class TemperatureConversion_JavaLab {
             System.out.println("\nCold Climate");
         }
 
-        else if (tempc>=11 && tempc<=25 ){
+        if (tempc>=11 && tempc<=25 ){
             System.out.println("\nNormal Climate");
         }
 
-        else if (tempc>=26 && tempc<=45 ){
+        if (tempc>=26 && tempc<=45 ){
             System.out.println("\nVery Hot Climate");
         }
         else{
